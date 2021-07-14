@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W4D1 - Product</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/product.js"></script>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <form id="add-product">
+        <input id="id" name="id" type="hidden" value=<%= id %>>
+        <input id="name" name="name" type="hidden" value=<%= name %>>
+        <input id="price" name="price" type="hidden" value=<%= price %>>
+        <h4>Product: <%= name %></h4>
+        <h5>Price: <%= price %></h5>
+        <label for="qty">Quantity</label>
+        <input id="qty" name="qty" type="number" value='1'>
+        <input type="submit" value="Add to Cart">
+    </form>
+    <hr/>
+    <div id='msg'></div>
+    <hr/>
+    <%- include('cart.ejs') %>
+</body>
+</html>
